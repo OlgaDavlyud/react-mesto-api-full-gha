@@ -1,0 +1,6 @@
+.popup-show {
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.5s, opacity 0.5s linear;
+}

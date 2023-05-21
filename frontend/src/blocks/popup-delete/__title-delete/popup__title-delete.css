@@ -1,0 +1,12 @@
+.popup__title-delete {
+    max-width: 358px;
+    margin: 0;
+    padding: 34px 36px 19px;
+
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000;
+}

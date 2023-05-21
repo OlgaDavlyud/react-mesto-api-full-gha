@@ -1,0 +1,8 @@
+.login__form-field {
+    display:flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 358px;
+    height: 44px;
+    margin: 0 0 30px;
+}
