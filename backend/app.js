@@ -15,9 +15,11 @@ const {
 } = require('./controllers/users');
 const InternalServerError = require('./middlewares/error');
 
+const { DB_ADDRESS } = require('./config');
+
 const { PORT = 3000 } = process.env;
 
-mongoose.connect('mongodb://127.0.0.1:27017/mestodb');
+mongoose.connect(DB_ADDRESS);
 
 const app = express();
 
