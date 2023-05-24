@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 
 const { errors } = require('celebrate');
+// eslint-disable-next-line import/no-extraneous-dependencies
 const cors = require('cors');
 const {
   validateLogin,
@@ -35,7 +36,6 @@ app.use(routes);
 app.use(errors());
 app.use(InternalServerError);
 
-app.listen(PORT, (err) => {
-  if (err) console.error('Unable to connect the server: ', err);
-  console.log(`🌍 Server listening on port ${PORT}`);
+app.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}`);
 });
