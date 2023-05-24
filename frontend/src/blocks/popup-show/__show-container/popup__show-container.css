@@ -1,0 +1,9 @@
+.popup__show-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    max-width: max-content;
+    max-height: 562px;
+    margin: 90px auto;
+}

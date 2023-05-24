@@ -1,0 +1,20 @@
+.popup__container-update-avatar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    width: 430px;
+    height: 272px;
+    margin: 224px auto;
+
+    background-color: #fff;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+ }
+
+ @media screen and (max-width: 580px) {
+    .popup__container-update-avatar {
+        width: 282px;
+        height: 230px;
+    }
+ }

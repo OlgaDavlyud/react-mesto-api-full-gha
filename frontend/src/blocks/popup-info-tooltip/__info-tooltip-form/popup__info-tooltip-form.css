@@ -1,0 +1,4 @@
+.popup__info-tooltip-form{
+    display: flex;
+    flex-direction: column;
+}
