@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 
 const { errors } = require('celebrate');
+const cors = require('cors');
 const {
   validateLogin,
   validateUser,
@@ -18,6 +19,7 @@ const InternalServerError = require('./middlewares/error');
 const { PORT = 3000 } = process.env;
 
 const app = express();
+app.use(cors());
 mongoose.connect(DB_ADDRESS);
 
 app.use(cookieParser());
