@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser');
 
 const { errors } = require('celebrate');
 const cors = require('cors');
+const { requestLogger, errorLogger } = require('./middlewares/logger');
 const {
   validateLogin,
   validateUser,
@@ -25,10 +26,14 @@ mongoose.connect(DB_ADDRESS);
 app.use(cookieParser());
 app.use(express.json());
 
+app.use(requestLogger);
+
 app.post('/signin', validateLogin, login);
 app.post('/signup', validateUser, createUser);
 
 app.use(routes);
+
+app.use(errorLogger);
 
 app.use(errors());
 app.use(InternalServerError);
