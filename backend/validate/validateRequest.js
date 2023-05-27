@@ -1,5 +1,5 @@
 const { celebrate, Joi } = require('celebrate');
-const { regex } = require('./validateURL');
+const { REGEX_URL } = require('./validateURL');
 
 const validateLogin = celebrate({
   body: Joi.object().keys({
@@ -35,7 +35,7 @@ const validateUser = celebrate({
         'string.max': 'Максимальное количество символов - 30',
       }),
     avatar: Joi.string()
-      .pattern(regex)
+      .pattern(REGEX_URL)
       .message('Введите корректный url-адрес'),
     email: Joi.string()
       .required()
@@ -82,7 +82,7 @@ const validateUserAvatar = celebrate({
       .messages({
         'string.empty': 'Поле "avatar" обязательное для заполнения',
       })
-      .pattern(regex)
+      .pattern(REGEX_URL)
       .message('Введите корректный url-адрес'),
   }),
 });
@@ -100,7 +100,7 @@ const validateCard = celebrate({
       }),
     link: Joi.string()
       .required()
-      .pattern(regex)
+      .pattern(REGEX_URL)
       .message('Введите корректный url-адрес')
       .messages({
         'string.empty': 'Поле "link" обязательное для заполнения',
