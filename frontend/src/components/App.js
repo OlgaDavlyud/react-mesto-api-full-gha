@@ -75,7 +75,7 @@ function App() {
   }
 
   function handleCardLike(card) {
-    const isLiked = card.likes.some((i) => i._id === currentUser._id);
+    const isLiked = card.likes.some((id) => id === currentUser._id);
 
     api
       .changeLikeCardStatus(card._id, !isLiked)
@@ -179,12 +179,13 @@ function App() {
       Auth.checkToken(token)
         .then((res) => {
           if (res) {
+            setUserEmail({ email: res.email });
             setLoggedIn(true);
-            setUserEmail({ email: res.data.email });
             navigate("/", { replace: true });
           }
         })
         .catch((err) => {
+          localStorage.removeItem('token');
           console.log(err);
         });
     }

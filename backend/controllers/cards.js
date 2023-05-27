@@ -6,7 +6,6 @@ const { RES_OK, CREATED } = require('../errors/GoodRequest');
 
 const getCards = (req, res, next) => {
   Card.find({})
-    .populate(['owner', 'likes'])
     .then((cards) => {
       res.status(RES_OK).send(cards);
     })

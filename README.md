@@ -8,7 +8,7 @@
 
 ## Ссылки на проект
 
-IP-адрес 62.84.126.80
+IP 62.84.126.80
 
 Frontend https://davlyud.nomoredomains.monster
 
