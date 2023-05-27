@@ -1,4 +1,5 @@
-export const BASE_URL = 'http://localhost:3000';
+// export const BASE_URL = 'http://localhost:3000';
+export const BASE_URL = 'https://api.davlyud.nomoredomains.monster';
 
 function getResponse(res) {
   if (!res.ok) {
