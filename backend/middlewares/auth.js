@@ -7,7 +7,7 @@ module.exports = (req, res, next) => {
   // const token = req.cookies.jwt;
   const { authorization } = req.headers;
 
-  if (!authorization.startsWith('Bearer')) {
+  if (!authorization || !authorization.startsWith('Bearer ')) {
     return next(new UnauthorizedError('Требуется авторизация'));
   }
 
