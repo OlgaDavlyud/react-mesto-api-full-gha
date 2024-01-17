@@ -13,3 +13,7 @@ IP 62.84.126.80
 Frontend https://davlyud.nomoredomains.monster
 
 Backend https://api.davlyud.nomoredomains.monster
+
+**Статус проекта**
+
+Проект находится на доработке из-за смены сервера
